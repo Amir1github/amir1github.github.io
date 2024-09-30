@@ -1,0 +1,45 @@
+<!-- python -m http.server 8000 -->
+ <!--c:\Users\Zamira\OneDrive\Документы\site-->
+<!DOCTYPE html>
+<html >
+  <head>
+    
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solar System</title>
+    <link rel="stylesheet" href="styles.css">
+    
+  </head>
+  <body>
+    <header>
+      <select id="select">
+        <option value="value0">Solar System</option>
+        <option value="value1">Asteroids</option>
+        <option value="value2" >Satellits</option>
+        <option value="value3">About Us</option>
+      </select>
+    </header>
+    <hr >
+
+    <div id="earth" style="position: absolute; color: white; z-index: 10;transition: transform 0.1s ease;">
+      <button id="earthbut">Earth</button>
+    </div>
+    
+    <script type="module" crossorigin src="./index.js"></script>
+    
+    <div class="headtitle">
+      <p id="titletext">
+        Solar System
+      </p>
+    </div>
+
+    <div class="info" >
+      <p id="infotext">
+        solar system, a than 210 known planetary satellites (moons); many asteroids, some with their own satellites; comets and other icy bodies; and vast reaches of highly tenuous gas and dust known as the interplanetary medium.
+      </p>
+    </div>
+  </body>
+</html>
