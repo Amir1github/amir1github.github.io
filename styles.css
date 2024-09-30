@@ -1,0 +1,78 @@
+
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+
+}
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #17264e;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #2748a1;
+}
+header{
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  color:white;
+  background-color: black;
+  margin: 0;
+  height: 25px;
+}
+#select{
+  position: absolute;
+  right: 20px;
+  border: 0;
+  background-color: black;
+  font-family: "Alfa Slab One", serif;
+  font-size: 20px;
+  font-style: normal;
+  color:white;
+  outline: 0;
+}
+hr{
+  margin:0;
+}
+.headtitle{
+  position: absolute; 
+  color: rgb(26, 17, 17); 
+  z-index: 10; 
+  left: 0px;
+  background-color: rgba(6, 67, 158, 0.7);
+  margin: 10px;
+  border: 5px;
+}
+#titletext{
+  margin:10px;
+  font-family: "Alfa Slab One", serif;
+  font-size: 20px;
+  font-style: normal;
+  color:white;
+  
+}
+.info{
+  width:240px;
+  height: 300px;
+  top:75px;
+  position:absolute; 
+  color: rgb(26, 17, 17); 
+  z-index: 10; 
+  left: 0px;
+  background-color: rgba(6, 67, 158, 0.7);
+  margin: 10px;
+  border: 5px;
+}
+#infotext{
+  margin-left: 5px;
+  color: white;
+  font-family: "Alfa Slab One", serif;
+  font-size: 20px;
+}
+
