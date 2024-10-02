@@ -167,23 +167,28 @@ function animate() {
 
 const earthButton = document.getElementById('earthbut');
 
-
-
+const earthinfo = "Earth is the third planet from the Sun and the only astronomical object known to harbor life. This is enabled by Earth being an ocean world, the only one in the Solar System sustaining liquid surface water."
+const solarsysteminfo = "The solar system has one star, eight planets, five officially named dwarf planets , hundreds of moons, thousands of comets, and more than a million asteroids. Our solar system is located in the Milky Way, a barred spiral galaxy with two major arms, and two minor arms.";
 animate();
 let isHighlighted = false;
 
 // Функция для подсветки Земли
 function highlightEarth() {
+  
   if (!isHighlighted) {
     // Если подсветка выключена, включаем её
     earth.mesh.material.emissive.set(0xffff00); // Установить эмиссивный цвет (желтый)
     earth.mesh.material.emissiveIntensity = 0.5; // Устанавливаем интенсивность эмиссии
     isHighlighted = true; // Обновляем состояние
+    document.getElementById("titletext").textContent = "Earth";
+    document.getElementById("infotext").textContent = earthinfo;
   } else {
     // Если подсветка включена, выключаем её
     earth.mesh.material.emissive.set(0x000000); // Установить эмиссивный цвет на черный (выключить подсветку)
     earth.mesh.material.emissiveIntensity = 0; // Устанавливаем интенсивность эмиссии на 0
     isHighlighted = false; // Обновляем состояние
+    document.getElementById("titletext").textContent = "Solar System";
+    document.getElementById("infotext").textContent = solarsysteminfo;
   }
 }
 
@@ -194,3 +199,34 @@ window.addEventListener("resize", function () {
   camera.updateProjectionMatrix();
   renderer.setSize(window.innerWidth, window.innerHeight);
 });
+let musicBtn = document.getElementById('music-btn');
+let musicIcon = document.getElementById('music-icon'); // Убедитесь, что элемент с таким ID существует
+let isMusicOn = false;
+let soundtrack = new Audio("univerce-sound.mp3"); // Создаем объект Audio
+
+// Устанавливаем свойство loop
+soundtrack.loop = true;
+
+// Добавляем обработчик событий на кнопку
+musicBtn.addEventListener('click', playMusic);
+function playMusic(){
+   if(isMusicOn){
+      isMusicOn=false;
+      musicIcon.src = "./no-sound.png";
+   }else{
+      isMusicOn=true;
+      musicIcon.src = "./volume-up.png";
+   }
+   if (isMusicOn) {
+    soundtrack.play(); // Воспроизводим музыку
+    musicIcon.src = "./volume-up.png"; // Изменяем иконку на "громкость включена"
+    
+  } else {
+    soundtrack.pause(); // Останавливаем музыку
+    musicIcon.src = "./no-sound.png"; // Изменяем иконку на "без звука"
+  
+  }
+  console.log(isMusicOn);
+}
+
+
