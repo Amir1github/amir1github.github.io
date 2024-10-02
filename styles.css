@@ -1,5 +1,4 @@
 
-
 body {
   margin: 0;
   overflow-x: hidden;
@@ -41,13 +40,19 @@ hr{
   margin:0;
 }
 .headtitle{
+  text-align: center;
+  width: 240px;
   position: absolute; 
   color: rgb(26, 17, 17); 
   z-index: 10; 
   left: 0px;
   background-color: rgba(6, 67, 158, 0.7);
   margin: 10px;
-  border: 5px;
+  border: 4px solid rgba(96, 156, 247, 0.747);
+  border-radius: 10px;
+
+  /* Свечение вокруг рамки */
+  box-shadow: 0 0 12px 4px rgba(65, 204, 214, 0.884);
 }
 #titletext{
   margin:10px;
@@ -57,22 +62,66 @@ hr{
   color:white;
   
 }
-.info{
-  width:240px;
+.info {
+  width: 240px;
   height: 300px;
-  top:75px;
-  position:absolute; 
-  color: rgb(26, 17, 17); 
-  z-index: 10; 
+  top: 75px;
+  position: absolute;
+  color: rgb(26, 17, 17);
+  z-index: 10;
   left: 0px;
   background-color: rgba(6, 67, 158, 0.7);
   margin: 10px;
-  border: 5px;
+  
+  /* Здесь задаем полное описание для рамки */
+  border: 4px solid rgba(96, 156, 247, 0.747);
+  border-radius: 10px;
+
+  /* Свечение вокруг рамки */
+  box-shadow: 0 0 12px 4px rgba(65, 204, 214, 0.884);
 }
 #infotext{
   margin-left: 5px;
   color: white;
   font-family: "Alfa Slab One", serif;
   font-size: 20px;
+  
 }
 
+#music-btn{
+  position:absolute;
+  bottom: 10px;
+  left: 50%; 
+   
+  width:36px; 
+  height: 42; 
+  border: none; 
+  border-radius: 13px; 
+  
+}
+@keyframes myanimation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#ear-png {
+  position: absolute;
+  
+  width: 500px;
+  height: 500px;
+  left: 1100px;
+  bottom: 70px;
+  visibility:hidden;
+  transform-origin: center; /* Установить точку вращения в центр элемента */
+  animation: myanimation 10s linear infinite;
+}
+#ear-png img {
+  width: 100%; /* Масштабирование изображения */
+  height: auto; /* Сохраняем пропорции */
+  display: block;
+}
